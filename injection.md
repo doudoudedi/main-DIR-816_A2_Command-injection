@@ -17,6 +17,7 @@ Hardware Link:http://support.dlink.com.cn/ProductInfo.aspx?m=DIR-816
 ​	The HTTP request parameter is used in the handler function of  /goform/form2userconfig.cgi route, which can construct the user name string to delete the user function. This can lead to command injection through shell metacharacters.
 
 ​	If the user can configure the router, it may cause unconditional command execution If the user can configure the router, it may cause unconditional command execution.
+
 漏洞厂商已认可https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10240
 
 ##### POC&&EXP
