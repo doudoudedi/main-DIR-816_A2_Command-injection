@@ -18,7 +18,7 @@ Hardware Link:http://support.dlink.com.cn/ProductInfo.aspx?m=DIR-816
 
 ​	If the user can configure the router, it may cause unconditional command execution If the user can configure the router, it may cause unconditional command execution.
 
-漏洞厂商已认可https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10240
+https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10240
 
 ##### POC&&EXP
 First, get the tokenid 
